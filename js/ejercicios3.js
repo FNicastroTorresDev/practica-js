@@ -62,38 +62,64 @@ function ejercicio3() {
   piramide.innerHTML = `<ol>${items}</ol>`
 }
 
-// VISTO EN CLASE 
+function ejercicio4() {
+  let num = prompt('Ingrese un número')
+  descripcion.innerHTML = 'El número ingresado es:'
+  resultado.innerHTML = parOImpar(num)
+}
 
-/*
-const date = new Date('11/14/2022').getDay()
-
-
-
-function isWeekend(day) {
-  if (day === 0 || day === 6 ) {
-    return 'Is Weekend! Lets go for a beer!'
+const parOImpar = num => {
+  if (num % 2 == 0) {
+    return 'Par'
   } else {
-    return 'Not Weekend. Go to work!'
+    return 'Impar'
   }
 }
 
-console.log(isWeekend(date))
-
-
-
-function isWeekend(day) {
-  return (day === 0 || day === 6)
+function ejercicio5() {
+  let frase = prompt('Ingrese una frase')
+  descripcion.innerHTML = `La frase "${frase}" está formada por:`
+  resultado.innerHTML = minusOMayus(frase)
 }
 
-function printWeekend(isWeekend) {
-  if (isWeekend) {
-    console.log('Is Weekend! Lets go for a beer!')
+const minusOMayus = frase => {
+  let contador = 0
+  for (let i = 0; i < frase.length; i++) {
+    if (mayus(frase.charAt(i))) {
+      contador++
+    }
+  }
+  if (contador == frase.length) {
+    return 'Solo mayúsculas'
+  } else if (contador == 0) {
+    return 'Solo minúsculas'
   } else {
-    console.log('Not Weekend. Go to work!')
+    return 'Mayúsculas y minúsculas'
   }
 }
 
-printWeekend(isWeekend(date))
+const mayus = letra => letra === letra.toUpperCase()
 
-*/
+function ejercicio6() {
+  const lados = prompt('Ingrese los lados del rectángulo separados por una x (ejemplo: "2x4"):')
+  descripcion.innerHTML = `El perímetro del rectángulo ${lados} es:`
+  resultado.innerHTML = perimetro(lados)
+}
 
+const perimetro = lados => 2*(parseInt(lados.substring(0,lados.indexOf('x')))+parseInt(lados.substring(lados.indexOf('x')+1)))
+
+function ejercicio7() {
+  const num = parseInt(prompt('Ingrese un número'))
+  descripcion.innerHTML = `Tabla del ${num}:`
+  piramide.innerHTML = `<ul>${tabla(num)}</ul>`
+}
+
+const tabla = num => {
+  let lista = ''
+  for (let i = 1; i <= 10; i++) {
+    lista += fila(num,i)
+  }
+  return lista
+}
+
+const fila = (num,i) => `<li>${i} * ${num} = ${i*num}</li>`

@@ -99,3 +99,7 @@ header a {
   height: auto;
   margin: 8px auto;
 }
+
+div ul {
+  list-style: none;
+}

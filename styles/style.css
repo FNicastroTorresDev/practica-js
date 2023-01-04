@@ -48,6 +48,16 @@ header a {
   transform: scale(1.1);
 }
 
+.aclaraciones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aclaraciones p {
+  margin: 10px auto;
+}
+
 .desarrollado p {
   text-align: center;
   border: 1px solid black;

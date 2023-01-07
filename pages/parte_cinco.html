@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+  <html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios JavaScript - Parte 4</title>
+
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../styles/style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Ejercicios JavaScript 5 - <a href="https://docs.google.com/document/d/1kA4muGGnCnD0am3vBB4h7VYamCSH1eB_znUmMKPC2w8/edit" target="_blank">DOM y BOM</a></h1>
+    </header>
+
+    <section class="botonera">
+      <button onclick="ejercicio1()">Ejercicio 1</button>
+      <button onclick="ejercicio2()">Ejercicio 2</button>
+      <button onclick="ejercicio3()">Ejercicio 3</button>
+    </section>
+
+    <section class="aclaraciones">
+      <p>Ejercicios 4, 5 y 6 están en <a href="https://github.com/FNicastroTorresDev/reloj-y-mas" target="_blank">este repositorio</a>.</p>
+    </section>
+
+    <section id="container" class="desarrollado">
+      <!-- <p id="descripcion"></p>
+      <h2 id="resultado"></h2>
+      <div id="piramide"></div> -->
+    </section>
+
+    <div class="modal fade" id="addTaskModal" tabindex="-1" aria-labelledby="addTaskModal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="addTaskModalLabel">Agregar tarea</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <form id="addTaskForm" onsubmit="addTask(); return false">
+              <div class="mb-3">
+                <label for="taskDescription" class="form-label">Descripción de la tarea:</label>
+                <textarea required class="form-control" id="taskDescription" rows="3" minlength="1" maxlength="240"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="taskPriority" class="form-label">Prioridad:</label>
+                <select class="form-select" id="taskPriority" required>
+                  <option selected>Seleccionar</option>
+                  <option value="Alta">Alta</option>
+                  <option value="Media">Media</option>
+                  <option value="Baja">Baja</option>
+                </select>
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="submit" class="btn btn-primary" form="addTaskForm">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="../index.html" class="link">Inicio</a>
+    <a onclick="window.location.reload()" class="link">Vaciar página</a>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="../js/ejercicios5.js"></script>
+  </body>
+</html>
